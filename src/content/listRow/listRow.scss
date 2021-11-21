@@ -1,0 +1,59 @@
+@import "src/globalStyles";
+
+.ListRow {
+  margin: 10px 15px;
+  box-shadow: $box-shadow;
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+  .RowName {
+    margin-left: 30px;
+    min-width: 295px;
+  }
+
+  button {
+    width: 60px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #FFF;
+  }
+
+  .BlueButton {
+    border-color: $dark-blue;
+    color: $dark-blue;
+  }
+
+  .BlueSelected {
+    color: #FFF;
+    background: $dark-blue;
+  }
+
+  .PurpleButton {
+    border-color: $purple;
+    color: $purple;
+    margin-left: 10px;
+  }
+
+  .PurpleSelected {
+    color: #FFF;
+    background: $purple;
+  }
+
+  .RowType {
+    width: 165px;
+    margin-left: auto;
+    display: flex;
+
+    .RowTypeValue {
+      min-width: 65px;
+      padding: 3px 0;
+      background: $light-blue;
+      color: $blue;
+      font-size: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+}
