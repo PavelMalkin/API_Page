@@ -12,11 +12,17 @@ const nameObject = {
   urlParams: "URL Parameters",
 }
 
-const List = ({name, rowsArray}) => {
+const List = ({name, rowsArray, updateData}) => {
   const [open, setOpen] = useState(false);
 
+  const handleUpdate = (value, index) => {
+    const tempArray = [...rowsArray];
+    tempArray[index] = {...tempArray[index], ...value}
+    updateData({[name]: tempArray})
+  }
+
   const rows = rowsArray.map( (row, index) => (
-    <ListRow key={`Row${name}${index}`} data={row} />
+    <ListRow key={`Row${name}${index}`} data={row} handleUpdate={val => handleUpdate(val, index)}/>
   ))
 
   return (

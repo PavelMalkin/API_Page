@@ -6,6 +6,13 @@ import ContentContainer from "./content/contentContainer/ContentContainer";
 function App() {
   const [data, setData] = useState(require('./fe_data.json'));
   const [direction, setDirection] = useState('request');
+
+  const updateData = (value) => {
+    const tempData = {...data};
+    tempData[direction] = {...tempData[direction], ...value}
+    setData(tempData)
+  }
+
   return (
     <div className="App">
       <header>
@@ -29,7 +36,7 @@ function App() {
         </div>
       </header>
       <div className="divider"/>
-      <ContentContainer data={data[direction]} setData={setData}/>
+      <ContentContainer data={data[direction]} updateData={updateData}/>
     </div>
   );
 }

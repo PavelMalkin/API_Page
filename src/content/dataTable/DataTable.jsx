@@ -1,12 +1,13 @@
 import "./dataTable.scss"
 import List from "../list/List";
 
-const DataTable = ({data}) => {
+const DataTable = ({data, updateData}) => {
   console.log('data in DataTable', data);
 
-   const lists = Object.keys(data).map((key, index) => (
-     <List name={key} rowsArray={data[key]} key={`List${index}`}/>
-   ) )
+  const lists = Object.keys(data)
+    .map((key, index) => (
+      <List name={key} rowsArray={data[key]} key={`List${index}`} updateData={updateData}/>
+    ));
 
   return (
     <div className="Table">

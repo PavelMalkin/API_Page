@@ -4,7 +4,7 @@ import SearchBar from "../searchBar/SearchBar";
 import DataTable from "../dataTable/DataTable";
 
 const ContentContainer = ({
-  setData,
+  updateData,
   data
 }) => {
   const [filter, setFilter] = useState({
@@ -15,7 +15,7 @@ const ContentContainer = ({
   return (
     <>
       <SearchBar setFilter={setFilter} filter={filter}/>
-      <DataTable data={data} setData={setData}/>
+      <DataTable data={data} updateData={updateData}/>
     </>
   );
 };
