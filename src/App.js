@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 import "./App.scss"
-import ContentContainer from "./content/contentContainer/ContentContainer";
 
 function App() {
   const [data, setData] = useState(require('./fe_data.json'));
@@ -36,7 +35,8 @@ function App() {
         </div>
       </header>
       <div className="divider"/>
-      <ContentContainer data={data[direction]} updateData={updateData}/>
+      <SearchBar setFilter={setFilter} filter={filter}/>
+      <DataTable data={filteredData[direction]} direction={direction} updateData={updateData}/>
     </div>
   );
 }
