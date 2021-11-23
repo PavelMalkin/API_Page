@@ -6,7 +6,6 @@ import "./SearchBar.scss";
 
 const SearchBar = ({
   setFilter,
-  filter
 }) => {
   const [name, setName] = useState("");
   const [pii, setPii] = useState(false)
@@ -23,23 +22,25 @@ const SearchBar = ({
   }
 
   return (
-    <div className="SearchBar">
-      <form onSubmit={handleSubmit}>
-        <Icon className="SearchIcon"/>
-        <input
-          className="TextInput"
-          type="text"
-          placeholder="Search"
-          onChange={e => setName(e.target.value)}
-          value={name}/>
-        <div className="Divider"/>
-        <div className="CheckBox">
-          <input type="checkbox" id="pii" onChange={e => setPii(e.target.checked)} checked={pii}/>
-          <label htmlFor="pii">Show PII only</label>
-        </div>
-        <div className="SearchButton" onClick={handleSubmit}>Apply</div>
-      </form>
-      <div className="ResetButton" onClick={handleReset}>Reset Filter</div>
+    <div className="SearchBar_Wrapper">
+      <div className="SearchBar">
+        <form onSubmit={handleSubmit}>
+          <Icon className="SearchIcon"/>
+          <input
+            className="TextInput"
+            type="text"
+            placeholder="Search"
+            onChange={e => setName(e.target.value)}
+            value={name}/>
+          <div className="Divider"/>
+          <div className="CheckBox">
+            <input type="checkbox" id="pii" onChange={e => setPii(e.target.checked)} checked={pii}/>
+            <label htmlFor="pii">Show PII only</label>
+          </div>
+          <div className="SearchButton" onClick={handleSubmit}>Apply</div>
+        </form>
+        <div className="ResetButton" onClick={handleReset}>Reset Filter</div>
+      </div>
     </div>
   )
 }

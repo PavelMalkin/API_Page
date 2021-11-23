@@ -1,52 +1,74 @@
 @import "src/globalStyles";
 
-.SearchBar {
-  margin: 40px 20px 55px 20px;
-  height: 40px;
-  background: #fff;
-  box-shadow: $box-shadow;
-  position: relative;
-  form {
-    display: flex;
-    height: 100%;
-    .SearchIcon {
-      padding: 0 15px;
-      height: 20px;
-      margin: auto;
-      color: $dark-text;
+.SearchBar_Wrapper {
+  padding: 0 20px;
+  .SearchBar {
+    margin: 40px auto 55px;
+    height: 40px;
+    background: #fff;
+    box-shadow: $box-shadow;
+    position: relative;
+    max-width: 1200px;
+
+    form {
+      display: flex;
+      height: 100%;
+
+      .SearchIcon {
+        padding: 0 15px;
+        height: 18px;
+        margin: auto;
+        color: $dark-gray;
+      }
+
+      .TextInput {
+        flex: 1;
+        border: none;
+        &::placeholder {
+          color: #CBCBCB;
+          font-size: 16px;
+          font-weight: 800;
+        }
+      }
+
+      .SearchButton {
+        width: 140px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $purple;
+        color: #FFF;
+        font-weight: 800;
+      }
+
+      .CheckBox {
+        width: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $dark-gray;
+        font-weight: 600;
+        input {
+          margin-right: 10px;
+        }
+      }
+
+      .Divider {
+        background: $gray;
+        height: calc(100% - 15px);
+        width: 2px;
+        margin: auto;
+      }
     }
-    .TextInput {
-      flex: 1;
-      border: none;
-    }
-    .SearchButton {
-      width: 140px;
+
+    .ResetButton {
+      display: flex;
+      justify-content: end;
+      margin-top: 7px;
+      color: $purple;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: $purple;
-      color: #FFF;
+      font-weight: 600;
     }
-    .CheckBox {
-      width: 160px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: $dark-text;
-    }
-    .Divider {
-      background: $gray;
-      height: calc(100% - 15px);
-      width: 2px;
-      margin: auto;
-    }
-  }
-  .ResetButton {
-    display: flex;
-    justify-content: end;
-    margin-top: 7px;
-    color: $purple;
-    cursor: pointer;
   }
 }

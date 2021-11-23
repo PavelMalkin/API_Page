@@ -59,11 +59,11 @@ function App() {
   }, [data, filter])
 
   return (
-    <div className="App">
+    <>
       <Header data={data} direction={direction} setDirection={setDirection}/>
       <SearchBar setFilter={setFilter} filter={filter}/>
       <DataTable data={filteredData[direction]} direction={direction} updateData={updateData}/>
-    </div>
+    </>
   );
 }
 
