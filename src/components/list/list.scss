@@ -4,12 +4,12 @@
   .ListHeader {
     display: flex;
     align-items: center;
-    margin: 25px 15px;
+    margin: 20px 15px 15px;
 
     .ListIcon {
       height: 10px;
       width: 10px;
-      padding: 4px;
+      padding: 2px;
       background: $gray;
       border-radius: 50%;
       color: $purple;

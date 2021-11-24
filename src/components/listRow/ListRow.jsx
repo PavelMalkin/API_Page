@@ -7,7 +7,7 @@ const ListRow = ({
 
   return (
     <div className="ListRow">
-      <h4 className="RowName">{data.name}</h4>
+      <h5 className="RowName">{data.name}</h5>
       <button
         className={`BlueButton ${data.pii ? "BlueSelected" : ""}`}
         onClick={() => handleUpdate({ pii: !data.pii })}

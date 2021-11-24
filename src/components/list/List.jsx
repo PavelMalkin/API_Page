@@ -13,7 +13,7 @@ const nameObject = {
 }
 
 const List = ({name, rowsArray, updateData}) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   const handleUpdate = (value, index) => {
     const tempArray = [...rowsArray];

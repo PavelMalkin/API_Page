@@ -19,10 +19,10 @@ const DataTable = ({
     <div className="Table_Wrapper">
       <div className="Table">
         <div className="Header">
-          <h3 className="Name">NAME</h3>
-          <h3 className="Button">PII</h3>
-          <h3 className="Button">MASKING</h3>
-          <h3 className="Type">TYPE</h3>
+          <h4 className="Name">NAME</h4>
+          <h4 className="Button">PII</h4>
+          <h4 className="Button">MASKING</h4>
+          <h4 className="Type">TYPE</h4>
         </div>
         <div className="Content">
           {lists}
