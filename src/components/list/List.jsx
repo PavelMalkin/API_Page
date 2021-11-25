@@ -15,14 +15,8 @@ const nameObject = {
 const List = ({name, rowsArray, updateData}) => {
   const [open, setOpen] = useState(true);
 
-  const handleUpdate = (value, index) => {
-    const tempArray = [...rowsArray];
-    tempArray[index] = {...tempArray[index], ...value}
-    updateData({[name]: tempArray})
-  }
-
   const rows = rowsArray.map( (row, index) => (
-    <ListRow key={`Row${name}${index}`} data={row} handleUpdate={val => handleUpdate(val, index)}/>
+    <ListRow key={`Row${name}${index}`} data={row} handleUpdate={(val, rowName) => updateData(val, rowName, name)}/>
   ))
 
   return (

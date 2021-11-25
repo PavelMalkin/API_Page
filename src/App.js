@@ -13,9 +13,10 @@ function App() {
   });
   const [filteredData, setFilteredData] = useState(data)
 
-  const updateData = (value) => {
+  const updateData = (value, rowName, name) => {
     const tempData = {...data};
-    tempData[direction] = {...tempData[direction], ...value}
+    const index = tempData[direction][name].findIndex( obj => obj.name === rowName);
+    tempData[direction][name][index] = {...tempData[direction][name][index], ...value}
     setData(tempData)
   }
 

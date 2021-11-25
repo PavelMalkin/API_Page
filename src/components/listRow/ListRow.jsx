@@ -10,12 +10,12 @@ const ListRow = ({
       <h5 className="RowName">{data.name}</h5>
       <button
         className={`BlueButton ${data.pii ? "BlueSelected" : ""}`}
-        onClick={() => handleUpdate({ pii: !data.pii })}
+        onClick={() => handleUpdate({ pii: !data.pii }, data.name)}
       >PII
       </button>
       <button
         className={`PurpleButton ${data.masked ? "PurpleSelected" : ""}`}
-        onClick={() => handleUpdate({ masked: !data.masked })}
+        onClick={() => handleUpdate({ masked: !data.masked }, data.name)}
       >MASKED
       </button>
       <div className="RowType">
